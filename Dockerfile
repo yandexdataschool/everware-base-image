@@ -20,5 +20,11 @@ RUN jupyter nbextension disable --sys-prefix create_assignment/main
 RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 
+RUN mkdir /exchange && \
+    chmod -R 777 /exchange
+
+VOLUME ["/exchange"]
+
+
 USER jovyan
 ADD jupyter_notebook_config.py /home/jovyan/nbgrader_config.py

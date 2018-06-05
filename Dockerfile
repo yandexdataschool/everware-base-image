@@ -8,7 +8,6 @@ RUN apt-get install -y libgl1-mesa-glx
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-ADD nbgrader_config.py /etc/nbgrader_config.py
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
@@ -22,3 +21,4 @@ RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 
 USER jovyan
+ADD jupyter_notebook_config.py /home/jovyan/nbgrader_config.py

@@ -8,6 +8,7 @@ RUN apt-get install -y libgl1-mesa-glx
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
+ADD jupyter_notebook_config.py /etc/jupyter_config.py
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
@@ -27,4 +28,4 @@ VOLUME ["/exchange"]
 
 
 USER jovyan
-ADD jupyter_notebook_config.py /home/jovyan/nbgrader_config.py
+ADD nbgrader_config.py /home/jovyan/nbgrader_config.py

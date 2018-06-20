@@ -1,5 +1,3 @@
-import os
-
 # Configuration file for jupyter-notebook.
 
 c.Exchange.root = '/exchange'
@@ -163,7 +161,7 @@ c.Exchange.root = '/exchange'
 #c.NotebookApp.iopub_msg_rate_limit = 1000
 
 ## The IP address the notebook server will listen on.
-c.NotebookApp.ip = '0.0.0.0'
+# c.NotebookApp.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
@@ -218,7 +216,7 @@ c.NotebookApp.ip = '0.0.0.0'
 #    from notebook.auth import passwd; passwd()
 #  
 #  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = os.environ['TEACHER_PASSWORD']
+# c.NotebookApp.password = ''
 
 ## Forces users to use a password for the Notebook server. This is useful in a
 #  multi user environment, for instance when everybody in the LAN can access each

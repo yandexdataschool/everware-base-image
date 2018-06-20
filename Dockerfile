@@ -29,5 +29,6 @@ VOLUME ["/exchange"]
 ADD static/custom/custom.js /opt/conda/lib/python3.6/site-packages/notebook/static/custom/
 
 
-USER jovyan
-ADD nbgrader_config.py /home/jovyan/nbgrader_config.py
+# USER jovyan
+# ADD nbgrader_config.py /home/jovyan/nbgrader_config.py
+

@@ -25,7 +25,3 @@ RUN mkdir /exchange && \
     chmod -R 777 /exchange
 
 VOLUME ["/exchange"]
-
-
-USER jovyan
-ADD nbgrader_config.py /home/jovyan/nbgrader_config.py

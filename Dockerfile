@@ -21,6 +21,8 @@ RUN jupyter nbextension disable --sys-prefix create_assignment/main
 RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 
+ADD static/custom/custom.js /opt/conda/lib/python3.6/site-packages/notebook/static/custom/
+
 RUN mkdir /exchange && \
     chmod -R 777 /exchange
 

@@ -5,4 +5,4 @@ pandas
 scikit-learn
 scipy
 nose
--e git+https://github.com/yandexdataschool/nbgrader.git@feature-email#egg=nbgrader
+-e git+https://github.com/yandexdataschool/nbgrader.git@2638ac725f4ee73a1ebd72822f24e494f7986746#egg=nbgrader

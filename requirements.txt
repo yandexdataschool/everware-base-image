@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
--e git+https://github.com/yandexdataschool/nbgrader.git@2638ac725f4ee73a1ebd72822f24e494f7986746#egg=nbgrader
+-e git+https://github.com/yandexdataschool/nbgrader.git@d81d3b366523372c10e5e1bbec7ba83c4a42010e#egg=nbgrader
 alembic==0.9.9
 backcall==0.1.0           # via ipython
 bleach==2.1.3             # via nbconvert

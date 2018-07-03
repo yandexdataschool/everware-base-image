@@ -10,6 +10,8 @@ RUN pip install -r /tmp/requirements.txt
 
 ADD jupyter_notebook_config.py /etc/jupyter_config.py
 
+RUN jupyter contrib nbextension install --sys-prefix
+
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN jupyter nbextension enable --sys-prefix toc2/main
 

@@ -15,17 +15,17 @@ RUN jupyter contrib nbextension install --sys-prefix
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN jupyter nbextension enable --sys-prefix toc2/main
 
+RUN jupyter nbextension install --sys-prefix --py gradelabel
+RUN jupyter nbextension enable --sys-prefix gradelabel/main
+
 RUN jupyter nbextension install --sys-prefix --py nbgrader --overwrite
 RUN jupyter nbextension enable --sys-prefix --py nbgrader
 RUN jupyter serverextension enable --sys-prefix --py nbgrader
 
-# Disable assignment creating interface for user
 RUN jupyter nbextension disable --sys-prefix create_assignment/main
 RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 RUN jupyter nbextensions_configurator disable --sys-prefix
-
-ADD static/custom/custom.js /opt/conda/lib/python3.6/site-packages/notebook/static/custom/
 
 RUN mkdir /exchange && \
     chmod -R 777 /exchange

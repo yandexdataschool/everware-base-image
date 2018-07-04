@@ -7,3 +7,4 @@ scipy
 nose
 -e git+https://github.com/yandexdataschool/nbgrader.git@d81d3b366523372c10e5e1bbec7ba83c4a42010e#egg=nbgrader
 jupyter_contrib_nbextensions
+jupyter-gradelabel
